@@ -1,0 +1,4 @@
+i=input()
+a=i[::-1]
+
+print(a)
