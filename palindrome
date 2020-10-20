@@ -1,0 +1,8 @@
+i=input()
+a=i[::-1]
+
+if i==a:
+  print("Palindrome")
+
+else:
+  print("Not Palindrome")
