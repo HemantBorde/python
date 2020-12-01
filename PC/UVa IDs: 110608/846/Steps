@@ -1,0 +1,65 @@
+Problem statement : 
+
+Consider the process of stepping from integer x to integer y along integer points of the straight line. 
+The length of each step must be non-negative and can be one bigger than, equal to, or one smaller than the length of the previous step. 
+What is the minimum number of steps in order to get from x to y? The length of both the first and the last step must be 1.
+
+Input
+
+The input begins with a line containing n, the number of test cases. Each test case that
+follows consists of a line with two integers: 0 ≤ x ≤ y < 2^31.
+
+Output
+
+For each test case, print a line giving the minimum number of steps to get from x to y.
+
+Sample Input
+
+3
+45 48
+45 49
+45 50
+
+Sample Output
+
+3
+3
+4
+
+
+
+PROGRAM : 
+
+cases=int(input())
+
+
+for i in range(0,cases):
+    
+    a, b = map(int , input().split())
+    
+    if(b-a==1):
+        print(1)
+    
+    if(b-a==2):
+        print(2)
+
+    count=2
+    if(b-a>=2):
+        c=b-a
+        t=2
+        c=c-t
+    
+        while True:
+            if(c>=2):
+                c=c-t
+                count=count+1
+                t=t+1
+            
+            elif(c>=1):
+                count=count+1
+                break
+        
+            else:
+                break
+        
+        print(count)
